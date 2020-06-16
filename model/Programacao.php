@@ -8,8 +8,8 @@
     private $id_Voo;
 
     function __construct($id_Prog,$dtOrigem_Prog,$hrOrigem_Prog,$dtDestino_Prog,$hrDestino_Prog,$id_Voo){
-	$this->id_Prog = $id_Prog;        
-	$this->dtOrigem_Prog = $dtOrigem_Prog;
+	    $this->id_Prog = $id_Prog;        
+	    $this->dtOrigem_Prog = $dtOrigem_Prog;
         $this->hrOrigem_Prog = $hrOrigem_Prog;
         $this->dtDestino_Prog = $dtDestino_Prog;
         $this->hrDestino_Prog = $hrDestino_Prog;

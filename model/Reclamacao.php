@@ -10,8 +10,8 @@
     private $codigo_Psg;
    
     function __construct($id_Rec,$data_Rec,$status_Rec,$descri_Rec,$codigo_Psg){
-	$this->id_Rec = $id_Rec;        
-	$this->data_Rec = $data_Rec;
+	    $this->id_Rec = $id_Rec;        
+	    $this->data_Rec = $data_Rec;
         $this->status_Rec = $status_Rec;
         $this->descri_Rec = $descri_Rec;
         $this->codigo_Psg = $codigo_Psg;

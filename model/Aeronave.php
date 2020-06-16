@@ -8,8 +8,8 @@
     private $capacPri_Aero;
    
     function __construct($prefixo_Aero,$capacEco_Aero,$capacPri_Aero){
-	$this->prefixo_Aero = $prefixo_Aero;        
-	$this->capacEco_Aero = $capacEco_Aero;
+	    $this->prefixo_Aero = $prefixo_Aero;        
+	    $this->capacEco_Aero = $capacEco_Aero;
         $this->capacPri_Aero = $capacPri_Aero;
     }   
 

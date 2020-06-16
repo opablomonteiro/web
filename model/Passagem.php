@@ -11,8 +11,8 @@
     private $id_Pag;
 
     function __construct($codigo_Psg,$tipo_Psg,$valor_Psg,$id_Prog,$cpf_Cli,$id_Pag){
-	$this->codigo_Psg = $codigo_Psg;        
-	$this->tipo_Psg = $tipo_Psg;
+	    $this->codigo_Psg = $codigo_Psg;        
+	    $this->tipo_Psg = $tipo_Psg;
         $this->valor_Psg = $valor_Psg;
         $this->checkin_Psg = null;
         $this->id_Prog = $id_Prog;

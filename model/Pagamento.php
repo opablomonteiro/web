@@ -8,8 +8,8 @@
     private $pagoParc_Pag;
    
     function __construct($id_Pag,$totalParc_Pag,$pagoParc_Pag){
-	$this->id_Pag = $id_Pag;       
-	$this->totalParc_Pag = $totalParc_Pag;
+	    $this->id_Pag = $id_Pag;       
+	    $this->totalParc_Pag = $totalParc_Pag;
         $this->pagoParc_Pag = $pagoParc_Pag;
     }   
 

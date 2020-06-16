@@ -10,8 +10,8 @@
     private $prefixo_Aero;
     
     function __construct($id_Voo,$cidOrigem_Voo,$cidDestino_Voo,$numero_Voo,$valor_Voo,$prefixo_Aero){
-	$this->id_Voo = $id_Voo;        
-	$this->cidOrigem_Voo = $cidOrigem_Voo;
+	    $this->id_Voo = $id_Voo;        
+	    $this->cidOrigem_Voo = $cidOrigem_Voo;
         $this->cidDestino_Voo = $cidDestino_Voo;
         $this->numero_Voo = $numero_Voo;
         $this->valor_Voo = $valor_Voo;

@@ -10,8 +10,8 @@
     private $codigo_Psg;
    
     function __construct($id_Bag,$dimensao_Bag,$peso_Bag,$caract_Bag,$codigo_Psg){
-	$this->id_Bag = $id_Bag;        
-	$this->dimensao_Bag = $dimensao_Bag;
+	    $this->id_Bag = $id_Bag;        
+	    $this->dimensao_Bag = $dimensao_Bag;
         $this->peso_Bag = $peso_Bag;
         $this->caract_Bag = $caract_Bag;
         $this->codigo_Psg = $codigo_Psg;
