@@ -3,8 +3,8 @@ class ConnectionFactory{
     public static function getConnection(){
         $servername = "localhost:3306"; 
         $username = "root";
-        $password = "";
-        $dbname = "web";
+        $password = "123456";
+        $dbname = "avian_bd";
 
       try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
