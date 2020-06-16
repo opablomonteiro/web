@@ -16,7 +16,7 @@ class ConnectionFactory{
       catch(PDOException $e)
         {
         //devia fazer um through
-        echo"erro na conexao" . $e->getMessage();
+        echo"erro na conexao - " . $e->getMessage();
         return null;
         }
     }
