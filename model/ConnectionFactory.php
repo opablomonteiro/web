@@ -4,7 +4,7 @@ class ConnectionFactory{
         $servername = "localhost:3306"; 
         $username = "root";
         $password = "123456";
-        $dbname = "avian_bd";
+        $dbname = "web";
 
       try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
