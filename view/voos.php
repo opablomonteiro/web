@@ -1,3 +1,9 @@
+<?php
+session_start();
+$voos = array();
+$voos = $_SESSION['voos'];
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -195,11 +201,11 @@
     </thead>
     <tbody>
         <tr>
-            <td><a href = "compra_paris.html">Salvador</a></td>
-            <td><a href = "compra_paris.html">Paris - França</a></td>
+            <td><a href = "compra_paris.html"><?php echo $voos[0]->getCidOrigem_Voo()?></a></td>
+            <td><a href = "compra_paris.html"><?php echo $voos[0]->getCidDestino_Voo()?></a></td>
             <td><a href = "compra_paris.html">20/08/2020</a></td>
-			<td><a href = "compra_paris.html">798932</a></td>
-			<td><a href = "compra_paris.html">R$1500,00</a></td>
+			<td><a href = "compra_paris.html"><?php echo $voos[0]->getNumero_Voo()?></a></td>
+			<td><a href = "compra_paris.html"><?php echo $voos[0]->getValor_Voo()?></a></td>
         </tr>
         <tr>
 			<td><a href = "compra_tokyo.html">Salvador</a></td>
