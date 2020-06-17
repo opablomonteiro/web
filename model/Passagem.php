@@ -8,12 +8,12 @@
     private $checkin_Psg;
     private $id_Prog;
     private $cpf_Cli;
-    private $id_Pag;
-
+    
     public function cadastrar_Psg(){
         $passagem = new PassagemDAO();
         return $passagem->cadastrar($this);
     }
+    
     public function calcular_Valor(){}
 
     public function cancelar_Passagem(){}
@@ -92,17 +92,7 @@
         return $this;
     }
 
-    public function getId_Pag()
-    {
-        return $this->id_Pag;
-    }
-
-    public function setId_Pag(Pagamento $id_Pag)
-    {
-        $this->id_Pag = $id_Pag;
-
-        return $this;
-    }
+    
   }
    
 ?>
