@@ -152,7 +152,7 @@ $livros = $_SESSION["lista"];
                 <input name="email" id="email" required="required" type="email" placeholder="Digite o seu e-Mail" size="30"/>
          
                 <label for="telefone">Telefone:</label>
-				<input name="telefone" id="telefone" required="required" type="tel" placeholder="Ex: 12 12345-6789" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" size="30"/>
+				<input name="telefone" id="telefone" required="required" type="tel" placeholder="Ex: 12 12345-6789" size="30"/>
 
 				<label for="cpf">CPF:</label>
 				<input name="cpf" id="cpf" required="required" type="text" placeholder="Digite seu cpf.." size="11"/>
