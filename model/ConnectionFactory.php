@@ -1,7 +1,7 @@
 <?php
 class ConnectionFactory{
     public static function getConnection(){
-        $servername = "localhost:127.0.0.1"; 
+        $servername = "localhost:localhost"; 
         $username = "root";
         $password = "123456";
         $dbname = "web";
