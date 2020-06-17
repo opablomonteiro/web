@@ -1,16 +1,22 @@
 <?php
 require "ConnectionFactory.php";
-class PagamentoDAO{
+class ClienteDAO{
     public function cadastrar($pagamento){
       try{
         $minhaConexao = ConnectionFactory::getconnection();
         //codigo para conetar e incluir no banco
-        $sql = $minhaConexao->prepare("insert into web.pagamento (parcelas, parcelas_pagas)
-         values (:parcelas, :parcelas_pagas)");
-        $sql->bindParam("parcelas",$totalParc_Pag);
-        $sql->bindParam("parcelas_pagas",$pagoParc_Pag);
-        $totalParc_Pag = $pagamento->getTotalParc_Pag();
-        $pagoParc_Pag = $pagamento->getPagoParc_Pag();
+        $sql = $minhaConexao->prepare("insert into web.cliente (cpf, nome, email, data_nascimento,telefone)
+         values (:cpf, :nome, :email , :data_nascimento, :telefone)");
+        $sql->bindParam("cpf",$cpf);
+        $sql->bindParam("nome",$nome);
+        $sql->bindParam("email",$email);
+        $sql->bindParam("data_nascimento",$data_nascimento);
+        $sql->bindParam("telefone",$telefone);
+        $cpf = $cliente->getCpf_Cli();
+        $nome = $cliente->getNome_Cli();
+        $email = $cliente->getEmail_Cli();
+        $data_nascimento = $cliente->getDtNasc_Cli();
+        $telefone = $cliente->getTelefone_Cli();
         $sql->execute();
          
         return $sql->rowCount(); //incluido com sucesso

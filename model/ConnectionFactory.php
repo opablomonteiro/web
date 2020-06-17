@@ -11,12 +11,12 @@ class ConnectionFactory{
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
-        echo "conectado com sucesso ";
+        //echo "conectado com sucesso";
         }
       catch(PDOException $e)
         {
         //devia fazer um through
-        echo"erro na conexao - " . $e->getMessage();
+        echo"erro na conexao" . $e->getMessage();
         return null;
         }
     }

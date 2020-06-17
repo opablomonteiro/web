@@ -17,17 +17,19 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>  
 	<script type="text/javascript" src="js/custom.js"></script>
+	
 
 </head>
 
 <body>
 
-	<header id="header" class="header-one">
+		
+		<header id="header" class="header-one">
 			<div class="container">
 				<div class="row">
 					<div class="logo-area clearfix">
 						<div class="logo col-xs-12 col-md-3">
-							<a href="index.php">
+							<a href="index.html">
 								<img id = "logoT" src="images/avian_logo.png" alt="">
 							</a>
 						</div>
@@ -38,7 +40,7 @@
 									<div class="info-box">
 										<div class="info-box-content">
 											<p class="info-box-title">E-mail:</p>
-											<p class="info-box-subtitle">Avion_contato@airline.com</p>
+											<p class="info-box-subtitle">contato@avian.com</p>
 										</div>
 									</div>
 								</li>
@@ -82,7 +84,7 @@
 
 								<div class="collapse navbar-collapse navbar-responsive-collapse">
 									<ul class="nav navbar-nav">
-										<li><a href="index.php">Home</a></li>
+										<li><a href="index.html">Home</a></li>
 
 										<li class="dropdown">
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sua Viagem <i
@@ -109,7 +111,7 @@
 										
 
 									</ul>
-								
+									
 								</div>
 								
 
@@ -129,63 +131,72 @@
 						<span class="search-close">&times;</span>
 					</div>
 				</div>
-
+				
 			</nav>
 			
 		</header>
+		
 
-   
+		
+		<div id="main-slide" class="carousel slide" data-ride="carousel">
+
+			
+			<ol class="carousel-indicators visible-lg visible-md">
+				<li data-target="#main-slide" data-slide-to="0" class="active"></li>
+				<li data-target="#main-slide" data-slide-to="1"></li>
+			</ol>
+			
+			<div class="carousel-inner">
 
 
-   <section id="main-container" class="main-container">
-     
-	    <div class="container">
+				<div class="item active" style="background-image:url(images/slider-main/slider1.jpg)">
+					<div class="slider-content text-left">
+						<div class="col-md-12">
+							<h2 class="slide-title-box animated2">Não deixe pra ultima hora</h2>
+							<h3 class="slide-title animated3" >Sem o check-in você não podera embarcar!</h3>
+							<h3 class="slide-sub-title animated3" id = "car1">Faça seu check-in agora!</h3>
+							<p class="animated3">
+								<a href="checkin.html" class="slider btn btn-primary border">Check-in</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				
 
-         <div class="row">
-            <div class="col-md-8">
-               <img src="images/compra_sp.jpg" alt="ops">
-            </div>
+				<div class="item" style="background-image:url(images/slider-main/slider2.jpg)">
+					<div class="slider-content text-right">
+						<div class="col-md-12">
+							<h2 class="slide-title animated6">Covid-19</h2>
+							<h3 class="slide-sub-title animated7">Compromisso Avian </h3>
+							<p class="slider-description lead animated7">Medidas tomadas pela avian na luta contra o Covid-19</p>
+							<p>
+								<a href="https://covid.saude.gov.br/" class="slider btn btn-primary">Leia</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				
 
-            <div class="col-md-4">
+			</div>
 
-               <h3 class="column-title mrt-0">São Paulo</h3>
-               <p>São Paulo, centro financeiro do Brasil, está entre as cidades mais populosas do mundo, com diversas instituições culturais e uma rica tradição arquitetônica.</p>
+			
+			<a class="left carousel-control" href="#main-slide" data-slide="prev">
+				<span><i class="fa fa-angle-left"></i></span>
+			</a>
+			<a class="right carousel-control" href="#main-slide" data-slide="next">
+				<span><i class="fa fa-angle-right"></i></span>
+			</a>
+		</div>
 
-               <ul class="project-info unstyled">
-                  <li>
-                     <div class="project-info-label">Data</div>
-                     <div class="project-info-content">25/08/2020 as 10hrs.</div>
-                  </li>
-                  <li>
-                     <div class="project-info-label">Preço</div>
-                     <div class="project-info-content">R$300,00</div>
-                  </li>
-                  <li>
-                     <div class="project-info-label">Número do voo</div>
-                     <div class="project-info-content">167427</div>
-                  </li>
-                  <li>
-                     <div class="project-info-label">Preço primeira classe</div>
-                     <div class="project-info-content">R$420,00</div>
-                  </li>
-                  <li>
-                     <div class="project-link">
-                        <a class="btn btn-primary" target="_blank" href="pagamento.html">Comprar</a>
-                     </div>
-                  </li>
-               </ul>
+		<section class="call-to-action-box no-padding">
+			<div class="container">
+				<div class="action-style-box">
+				</div>
+			</div>
+		</section>
 
-            
-            </div>
 
-         </div>
-
-      </div>
-	   
-   </section>
-	
-
-   <footer id="footer" class="footer bg-overlay">
+		<footer id="footer" class="footer bg-overlay">
       <div class="footer-main">
             <div class="container">
                   <div class="row">
@@ -216,7 +227,7 @@
                         
 
 
-					</div>
+                  </div>
             </div>
       </div>
 
@@ -232,6 +243,7 @@
 
          
 </footer>
+
 </body>
 
 </html>

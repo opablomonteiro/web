@@ -20,11 +20,9 @@
 	
 
 </head>
-
-<body>
-
-		
-		<header id="header" class="header-one">
+                
+	<body class="cadastro">
+        <header id="header" class="header-one">
 			<div class="container">
 				<div class="row">
 					<div class="logo-area clearfix">
@@ -134,52 +132,55 @@
 				
 			</nav>
 			
-        </header>
-
-        <div id="banner-area" class="banner-area" style="background-image:url(images/serv.jpg)">
-            <div class="banner-text">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-xs-12">
-                        <div class="banner-heading">
-                           <h1 class="banner-title" >Check-in</h1>
-                           <ol class="breadcrumb">
-                              <li>Faça seu check-in!</li>
-                           </ol>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <section id="secID">
-            <div class="container3">
-                    <h1>Check-in</h1>
-            
-    
-               <div class="container2"> 
-             <form action="/action_page.php" name="cadastro_cliente" method="POST" action="url para script aqui">
-                
-                    <label for="codPassagem">Código da passagem:</label>
-                    <input name="codPassagem" id="codPassagem" required="required" type="text" placeholder="Digite o código da passagem.." maxlength="60" /><br>
-
-                    <label for="cpfCheckin">CPF:</label>
-					<input name="cpfCheckin" id="cpfCheckin" required="required" type="text" placeholder="Digite o seu cpf.." maxlength="11" /><br>
-					
-					<script>
-						function alertCheckin() {
-						  alert("Check-in realizado com sucesso!");
-						}
-						</script>
-    
-                    <input id="btnCheck-in" type="submit" type="button" class="button" value="Check-in" onclick="alertCheckin()"/>
-    
-                        </form>
-                </div>
-            </div>
-    
-        </section>
+		</header>
+       <section>
+        <div class="container3">
+                <h1>Pagamento</h1>
         
+
+           <div class="container2"> 
+	     <form  name="pagamento_form" method="POST" action="..\controller\controller.php">
+                <label for="numcartao">Número do cartão:</label>
+                <input name="numcartao" id="numcartao" required="required" type="text" placeholder="Digite o num do cartão"  maxlength="60"/>
+            
+                <label for="validade">Validade do cartão:</label>
+                <input name="validade" id="validade" required="required" type="month" placeholder="MM/AAAA" /><br>
+             
+                <label for="codigo">Codigo:</label>
+                <input name="codigo" id="codigo" required="required" type="password" placeholder="Digite o seu codigo de segurança" size="30"/><br>
+
+                <label for="classe">Classe:</label>
+                <select id="classe">
+                    <option value="eco">Econômica</option>
+                    <option value="pri">Primeira classe</option>
+                  </select><br><br>
+         
+                <label for="valor">Valor:R$2500,00</label><BR><br>
+                 
+                <label for="parcelas">Parcelas:</label>
+                <select id="parcelas">
+                    <option value="1x">1x</option>
+                    <option value="2x">2x</option>
+                    <option value="3x">3x</option>
+                    <option value="4x">4x</option>
+                    <option value="5x">5x</option>
+                    <option value="6x">6x</option>
+                  </select><br>
+
+                  
+
+				
+				  <input type="hidden" name="acao" value="pagamento" id="acao">
+                <input id="comprar_passagem" type="submit" type="button" class="button" value="Comprar"/>
+                
+
+
+
+                    </form>
+            </div>
+        </div>
+
+    </section>
         <footer id="footer" class="footer bg-overlay">
             <div class="footer-main">
                   <div class="container">
@@ -227,7 +228,5 @@
       
                
       </footer>
-      
-      </body>
-      
-      </html>
+	</body>
+</html>

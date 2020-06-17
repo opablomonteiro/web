@@ -1,8 +1,4 @@
-<?php
-session_start();
-$livros = $_SESSION["lista"];
 
-?>
 <!DOCTYPE html>
 <html class="cadastro" lang="pt-br">
 	        <head>
@@ -29,7 +25,7 @@ $livros = $_SESSION["lista"];
 				<div class="row">
 					<div class="logo-area clearfix">
 						<div class="logo col-xs-12 col-md-3">
-							<a href="index.html">
+							<a href="index.php">
 								<img id = "logoT" src="images/avian_logo.png" alt="">
 							</a>
 						</div>
@@ -84,7 +80,7 @@ $livros = $_SESSION["lista"];
 
 								<div class="collapse navbar-collapse navbar-responsive-collapse">
 									<ul class="nav navbar-nav">
-										<li><a href="index.html">Home</a></li>
+										<li><a href="index.php">Home</a></li>
 
 										<li class="dropdown">
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sua Viagem <i
@@ -106,7 +102,7 @@ $livros = $_SESSION["lista"];
 											</ul>
 										</li>
 
-										<li><a href="perfil.html">Perfil</a></li>
+										<li><a href="perfil.php">Perfil</a></li>
 
 										
 
@@ -152,7 +148,7 @@ $livros = $_SESSION["lista"];
                 <input name="email" id="email" required="required" type="email" placeholder="Digite o seu e-Mail" size="30"/>
          
                 <label for="telefone">Telefone:</label>
-				<input name="telefone" id="telefone" required="required" type="tel" placeholder="Ex: 12 12345-6789" size="30"/>
+				<input name="telefone" id="telefone" required="required" type="tel" placeholder="Ex: 12 12345-6789"  size="30"/>
 
 				<label for="cpf">CPF:</label>
 				<input name="cpf" id="cpf" required="required" type="text" placeholder="Digite seu cpf.." size="11"/>
@@ -165,15 +161,11 @@ $livros = $_SESSION["lista"];
 				
 				<input type="hidden" name="acao" value="cadastrar" id="acao">
            
-           
-                
                 <input type="submit" type="button" class="button" value="Cadastrar"/>
                 <input type="submit" type="button" class="button" value="Login"/>
-                
 
-
-
-                    </form>
+					</form>
+    } 
             </div>
 		</div>
 		

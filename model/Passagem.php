@@ -1,5 +1,5 @@
 <?php
-    require "PassagemDAO.php";
+
   Class Passagem{
     
     private $codigo_Psg;
@@ -7,19 +7,23 @@
     private $valor_Psg;
     private $checkin_Psg;
     private $id_Prog;
-    private $cpf_Cli;
-    
-    public function cadastrar_Psg(){
-        $passagem = new PassagemDAO();
-        return $passagem->cadastrar($this);
-    }
-    public function checkin(){
-        $passagem = new PassagemDAO();
-        return $passagem->checkin($this);
+    private $id_Cli;
+    private $id_Pag;
+
+    function __construct($codigo_Psg,$tipo_Psg,$valor_Psg,$id_Prog,$id_Cli,$id_Pag){
+	$this->codigo_Psg = $codigo_Psg;        
+	$this->tipo_Psg = $tipo_Psg;
+        $this->valor_Psg = $valor_Psg;
+        $this->checkin_Psg = null;
+        $this->id_Prog = $id_Prog;
+        $this->id_Cli = $id_Cli;
+        $this->id_Pag = $id_Pag;
     }
     public function calcular_Valor(){}
 
     public function cancelar_Passagem(){}
+
+    public function checkin(){}
 
     public function getCodigo_Psg()
     {
@@ -81,19 +85,29 @@
         return $this;
     }
 
-    public function getCpf_Cli()
+    public function getId_Cli()
     {
-        return $this->cpf_Cli;
+        return $this->id_Cli;
     }
 
-    public function setCpf_Cli(Cliente $cpf_Cli)
+    public function setId_Cli(Cliente $id_Cli)
     {
-        $this->cpf_Cli = $cpf_Cli;
+        $this->id_Cli = $id_Cli;
 
         return $this;
     }
 
-    
+    public function getId_Pag()
+    {
+        return $this->id_Pag;
+    }
+
+    public function setId_Pag(Pagamento $id_Pag)
+    {
+        $this->id_Pag = $id_Pag;
+
+        return $this;
+    }
   }
    
 ?>

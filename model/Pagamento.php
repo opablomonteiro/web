@@ -1,18 +1,16 @@
 <?php
-  require "PagamentoDAO.php";
+  
   Class Pagamento{
 
 
     private $id_Pag;
     private $totalParc_Pag;
     private $pagoParc_Pag;
-    private $codigo_Psg;
-   
+
     public function cadastrar_Pag(){
-        $pagamento = new PassagemDAO();
+        $pagamento = new PagamentoDAO();
         return $pagamento->cadastrar($this);
     }
-
     
     public function getId_Pag()
     {
@@ -51,19 +49,6 @@
     public function setPagoParc_Pag($pagoParc_Pag)
     {
         $this->pagoParc_Pag = $pagoParc_Pag;
-
-        return $this;
-    }
-
-    public function getCodigo_Psg()
-    {
-        return $this->codigo_Psg;
-    }
-
-    
-    public function setCodigo_Psg($codigo_Psg)
-    {
-        $this->codigo_Psg = $codigo_Psg;
 
         return $this;
     }
