@@ -126,7 +126,7 @@ $voos = $_SESSION['voos'];
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sua Viagem <i
 													class="fa fa-angle-down"></i></a>
 											<ul class="dropdown-menu" role="menu">
-												<li><a href="voos.html">Compre sua passagem</a></li>
+												<li><a href="voos.php">Compre sua passagem</a></li>
 												<li><a href="checkin.html">Faça seu checkin</a></li>
 											</ul>
 										</li>
