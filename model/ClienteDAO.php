@@ -5,13 +5,13 @@ class ClienteDAO{
       try{
         $minhaConexao = ConnectionFactory::getconnection();
         //codigo para conetar e incluir no banco
-        $sql = $minhaConexao->prepare("insert into web.cliente (cpf, nome, email, data_nascimento,telefone)
-         values (:cpf, :nome, :email , :data_nascimento, :telefone)");
-        $sql->bindParam("cpf",$cpf);
-        $sql->bindParam("nome",$nome);
-        $sql->bindParam("email",$email);
-        $sql->bindParam("data_nascimento",$data_nascimento);
-        $sql->bindParam("telefone",$telefone);
+        $sql = $minhaConexao->prepare("insert into web.tb_cliente (cpf_Cli, nome_Cli, dtNasc_Cli, email_Cli, telefone_Cli)
+         values (:cpf_Cli, :nome_Cli, :dtNasc_Cli, :email_Cli, :telefone_Cli)");
+        $sql->bindParam("cpf_Cli",$cpf_Cli);
+        $sql->bindParam("nome_Cli",$nome_Cli);
+        $sql->bindParam("dtNasc_Cli",$dtNasc_Cli);
+        $sql->bindParam("email_Cli",$email_Cli);
+        $sql->bindParam("telefone_Cli",$telefone_Cli);
         $cpf = $cliente->getCpf_Cli();
         $nome = $cliente->getNome_Cli();
         $email = $cliente->getEmail_Cli();
