@@ -3,7 +3,7 @@ class ConnectionFactory{
     public static function getConnection(){
         $servername = "localhost:3306"; 
         $username = "root";
-        $password = "";
+        $password = "123456";
         $dbname = "web";
 
       try {
