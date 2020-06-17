@@ -1,7 +1,7 @@
 <?php
 class ConnectionFactory{
     public static function getConnection(){
-        $servername = "localhost:localhost"; 
+        $servername = "localhost:127.0.0.1"; 
         $username = "root";
         $password = "123456";
         $dbname = "web";
@@ -11,7 +11,7 @@ class ConnectionFactory{
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
-        echo "conectado com sucesso";
+        echo "conectado com sucesso ";
         }
       catch(PDOException $e)
         {
