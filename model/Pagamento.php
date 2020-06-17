@@ -1,5 +1,5 @@
 <?php
-  
+  require "PagamentoDAO.php";
   Class Pagamento{
 
 
@@ -7,11 +7,10 @@
     private $totalParc_Pag;
     private $pagoParc_Pag;
    
-    function __construct($id_Pag,$totalParc_Pag,$pagoParc_Pag){
-	    $this->id_Pag = $id_Pag;       
-	    $this->totalParc_Pag = $totalParc_Pag;
-        $this->pagoParc_Pag = $pagoParc_Pag;
-    }   
+    public function cadastrar_Pag(){
+        $pagamento = new PassagemDAO();
+        return $pagamento->cadastrar($this);
+    }
 
     
     public function getId_Pag()

@@ -1,5 +1,5 @@
 <?php
-
+    require "PassagemDAO.php";
   Class Passagem{
     
     private $codigo_Psg;
@@ -10,14 +10,9 @@
     private $cpf_Cli;
     private $id_Pag;
 
-    function __construct($codigo_Psg,$tipo_Psg,$valor_Psg,$id_Prog,$cpf_Cli,$id_Pag){
-	    $this->codigo_Psg = $codigo_Psg;        
-	    $this->tipo_Psg = $tipo_Psg;
-        $this->valor_Psg = $valor_Psg;
-        $this->checkin_Psg = null;
-        $this->id_Prog = $id_Prog;
-        $this->cpf_Cli = $cpf_Cli;
-        $this->id_Pag = $id_Pag;
+    public function cadastrar_Psg(){
+        $passagem = new PassagemDAO();
+        return $passagem->cadastrar($this);
     }
     public function calcular_Valor(){}
 
