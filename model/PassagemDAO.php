@@ -29,5 +29,24 @@ class PassagemDAO{
       }
       $minhaConexao = null;
     }
+    public function checkin($passagem){
+      try{
+        $minhaConexao = ConnectionFactory::getconnection();
+        //codigo para conetar e incluir no banco
+        $sql = $minhaConexao->prepare("UPDATE web.passagem SET checkin = 1 WHERE id_passagem = :id_passagem");
+        $sql->bindParam("id_passagem",$codigo_Psg);
+        $codigo_Psg = $passagem->getCodigo_Psg();
+        $sql->execute();
+         
+        return $sql->rowCount(); //incluido com sucesso
+      }
+      catch(PDOException $e) {
+        //fazer o through e tirar esse echo
+        //echo $e->getMessage();
+        echo "entrou no catch".$e->getmessage();
+        return 0; 
+      }
+      $minhaConexao = null;
+    }
 }
 ?>

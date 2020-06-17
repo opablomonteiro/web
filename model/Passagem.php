@@ -13,12 +13,13 @@
         $passagem = new PassagemDAO();
         return $passagem->cadastrar($this);
     }
-    
+    public function checkin(){
+        $passagem = new PassagemDAO();
+        return $passagem->checkin($this);
+    }
     public function calcular_Valor(){}
 
     public function cancelar_Passagem(){}
-
-    public function checkin(){}
 
     public function getCodigo_Psg()
     {
