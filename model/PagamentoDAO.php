@@ -1,6 +1,6 @@
 <?php
 require "ConnectionFactory.php";
-class ClienteDAO{
+class PagamentoDAO{
     public function cadastrar($pagamento){
       try{
         $minhaConexao = ConnectionFactory::getconnection();

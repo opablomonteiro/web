@@ -1,7 +1,7 @@
 <?php
 
  require_once '..\model\ListarPassagemDAO.php';
-
+ require "..\model\PassagemDAO.php";
   Class Passagem{
     
     private $codigo_Psg;
@@ -19,6 +19,11 @@
     public function listar_psg(){
         $passagem = new ListarPassagemDAO();
         return $passagem->listar($this);
+    }
+
+    public function cadastrar_Psg(){
+        $passagem = new PassagemDAO();
+        return $passagem->cadastrar($this);
     }
 
 
