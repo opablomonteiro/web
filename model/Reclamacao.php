@@ -1,23 +1,27 @@
 ﻿<?php
   
-  Class Reclamaçao{
+  require_once '..\model\ReclamacaoDAO.php';
+  Class Reclamacao{
 
 
     private $id_Rec;
     private $data_Rec;
     private $status_Rec;
     private $descri_Rec;
-    private $codigo_Psg;
+    private $id_Psg;
    
-    function __construct($id_Rec,$data_Rec,$status_Rec,$descri_Rec,$codigo_Psg){
-	    $this->id_Rec = $id_Rec;        
-	    $this->data_Rec = $data_Rec;
+    /*function __construct($id_Rec,$data_Rec,$status_Rec,$descri_Rec,$id_Psg){
+	$this->id_Rec = $id_Rec;        
+	$this->data_Rec = $data_Rec;
         $this->status_Rec = $status_Rec;
         $this->descri_Rec = $descri_Rec;
-        $this->codigo_Psg = $codigo_Psg;
-    }
+        $this->id_Pid_Psg = $id_Psg;
+    } */
 
-    public function cadastrar_Rec(){}
+    public function cadastrar_Rec(){
+        $minha_rec = new ReclamacaoDAO();
+        return $minha_rec->criar($this);
+    }
     public function alterar_Rec(){}
     public function arquivar_Rec(){}
 
@@ -69,14 +73,14 @@
         return $this;
     }
 
-    public function getCodigo_Psg()
+    public function getId_Psg()
     {
-        return $this->codigo_Psg;
+        return $this->id_Psg;
     }
 
-    public function setCodigo_Psg(Passagem $codigo_Psg)
+    public function setId_Psg(Passagem $id_Psg)
     {
-        $this->codigo_Psg = $codigo_Psg;
+        $this->id_Psg = $id_Psg;
 
         return $this;
     }

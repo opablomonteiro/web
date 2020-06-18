@@ -7,14 +7,14 @@
     private $dimensao_Bag;
     private $peso_Bag;
     private $caract_Bag;
-    private $codigo_Psg;
+    private $id_Psg;
    
-    function __construct($id_Bag,$dimensao_Bag,$peso_Bag,$caract_Bag,$codigo_Psg){
-	    $this->id_Bag = $id_Bag;        
-	    $this->dimensao_Bag = $dimensao_Bag;
+    function __construct($id_Bag,$dimensao_Bag,$peso_Bag,$caract_Bag,$id_Psg){
+	$this->id_Bag = $id_Bag;        
+	$this->dimensao_Bag = $dimensao_Bag;
         $this->peso_Bag = $peso_Bag;
         $this->caract_Bag = $caract_Bag;
-        $this->codigo_Psg = $codigo_Psg;
+        $this->id_Psg = $id_Psg;
     }   
     
     public function despachar_Bag(){}
@@ -74,14 +74,14 @@
         return $this;
     }
 
-    public function getCodigo_Psg()
+    public function getId_Psg()
     {
-        return $this->codigo_Psg;
+        return $this->id_Psg;
     }
  
-    public function setCodigo_Psg($codigo_Psg)
+    public function setId_Psg($id_Psg)
     {
-        $this->codigo_Psg = $codigo_Psg;
+        $this->id_Psg = $id_Psg;
 
         return $this;
     }

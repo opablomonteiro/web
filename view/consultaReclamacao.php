@@ -1,25 +1,29 @@
-
 <!DOCTYPE html>
-<html class="cadastro" lang="pt-br">
-	        <head>
-				<meta charset="utf-8">
-				<title>Avian - companhia aérea</title>
-			
-				<meta http-equiv="X-UA-Compatible" content="IE=edge">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-			
-				<link rel="stylesheet" href="css/bootstrap.min.css">
-				<link rel="stylesheet" href="css/style.css">
-				<link rel="stylesheet" href="css/font-awesome.min.css">
-			
-				<script type="text/javascript" src="js/jquery.js"></script>
-				<script type="text/javascript" src="js/bootstrap.min.js"></script>
-				<script type="text/javascript" src="js/owl.carousel.min.js"></script>  
-				<script type="text/javascript" src="js/custom.js"></script>
+<html lang="pt-br">
 
-                </head>
-                
-	<body class="cadastro">
+<head>
+
+	<meta charset="utf-8">
+	<title>Avian - companhia aérea</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>  
+	<script type="text/javascript" src="js/custom.js"></script>
+	
+
+</head>
+
+<body>
+
+		
 		<header id="header" class="header-one">
 			<div class="container">
 				<div class="row">
@@ -36,7 +40,7 @@
 									<div class="info-box">
 										<div class="info-box-content">
 											<p class="info-box-title">E-mail:</p>
-											<p class="info-box-subtitle">Avion_contato@airline.com</p>
+											<p class="info-box-subtitle">contato@avian.com</p>
 										</div>
 									</div>
 								</li>
@@ -127,52 +131,52 @@
 						<span class="search-close">&times;</span>
 					</div>
 				</div>
-
+				
 			</nav>
 			
-		</header>
-       <section>
-        <div class="container3">
-                <h1>Cadastro de Clientes</h1>
-        
+        </header>
 
-           <div class="container2"> 
-	     <form name="cadastro_cliente" method="post" action="..\controller\controller.php">
-                <label for="nomec">Nome:</label>
-                <input name="nome" id="nomec" required="required" type="text" placeholder="Digite seu nome completo"  maxlength="60"/>
-            
-                <label for="datanasc">Data de Nascimento:</label>
-                <input name="data" id="datanasc" required="required" type="date" placeholder="Digite sua data de Nascimento" />
-             
-                <label for="email">E-mail:</label>
-                <input name="email" id="email" required="required" type="email" placeholder="Digite o seu e-Mail" size="30"/>
-         
-                <label for="telefone">Telefone:</label>
-				<input name="telefone" id="telefone" required="required" type="tel" placeholder="Ex: 12 12345-6789"  size="30"/>
-
-				<label for="cpf">CPF:</label>
-				<input name="cpf" id="cpf" required="required" type="text" placeholder="Digite seu cpf.." size="11"/>
-				
-				<label for="psw1">Senha:</label>
-				<input name="psw1" id="psw1" required="required" type="password" placeholder="Digite sua senha.." size="30"/>
-				
-				<label for="psw2">Repita a senha:</label>
-				<input name="psw2" id="psw2" required="required" type="password" placeholder="Digite sua senha novamente.." size="30"/>
-				
-				<input type="hidden" name="acao" value="cadastrar" id="acao">
-           
-                <input type="submit" type="button" class="button" value="Cadastrar"/>
-                <input type="submit" type="button" class="button" value="Login"/>
-
-					</form>
-    } 
+        <div id="banner-area" class="banner-area" style="background-image:url(images/serv.jpg)">
+            <div class="banner-text">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xs-12">
+                        <div class="banner-heading">
+                           <h1 class="banner-title" >Consulte sua reclamação</h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-		</div>
-		
-	</section>
+         </div>
+         <section id="secdel">
+            <div class="container3">
+                    <h1>Reclamações</h1>
+            
+    
+               <div class="container2"> 
+             <form action="/action_page.php" name="cancelar_passagem" method="POST" action="url para script aqui">
+                
+                <label for="passagens_ex">Selecione a reclamação:</label>
+                 <select id="passagens_ex">
+                    <option value="1x">Reclamação:020321</option>
+                    <option value="2x">Reclamação:64978</option>
+                    <option value="3x">Reclamação:30887</option>
+                 </select><br>
 
+                 
+                 <div class="project-link">
+                    <a id = "btn-consultar" class="btn btn-primary" target="_blank" href="reclamacaoRegistrada.php">Consultar</a>
+                 </div>
+                 
 
-		<footer id="footer" class="footer bg-overlay">
+                        </form>
+                </div>
+            </div>
+    
+        </section>
+        
+        <footer id="footer" class="footer bg-overlay">
             <div class="footer-main">
                   <div class="container">
                         <div class="row">
@@ -219,5 +223,7 @@
       
                
       </footer>
-	</body>
-</html>
+      
+      </body>
+      
+      </html>

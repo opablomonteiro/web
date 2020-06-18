@@ -1,7 +1,7 @@
 <?php
-require_once "ConnectionFactory.php";
+require "ConnectionFactory.php";
 class ClienteDAO{
-    public function cadastrar($cliente){
+    public function cadastrar($pagamento){
       try{
         $minhaConexao = ConnectionFactory::getconnection();
         //codigo para conetar e incluir no banco

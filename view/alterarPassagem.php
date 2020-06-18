@@ -1,26 +1,28 @@
-
 <!DOCTYPE html>
-<html class="cadastro" lang="pt-br">
-	        <head>
-				<meta charset="utf-8">
-				<title>Avian - companhia aérea</title>
-			
-				<meta http-equiv="X-UA-Compatible" content="IE=edge">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-			
-				<link rel="stylesheet" href="css/bootstrap.min.css">
-				<link rel="stylesheet" href="css/style.css">
-				<link rel="stylesheet" href="css/font-awesome.min.css">
-			
-				<script type="text/javascript" src="js/jquery.js"></script>
-				<script type="text/javascript" src="js/bootstrap.min.js"></script>
-				<script type="text/javascript" src="js/owl.carousel.min.js"></script>  
-				<script type="text/javascript" src="js/custom.js"></script>
+<html lang="pt-br">
 
-                </head>
+<head>
+
+	<meta charset="utf-8">
+	<title>Avian - companhia aérea</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>  
+	<script type="text/javascript" src="js/custom.js"></script>
+	
+
+</head>
                 
 	<body class="cadastro">
-		<header id="header" class="header-one">
+        <header id="header" class="header-one">
 			<div class="container">
 				<div class="row">
 					<div class="logo-area clearfix">
@@ -36,7 +38,7 @@
 									<div class="info-box">
 										<div class="info-box-content">
 											<p class="info-box-title">E-mail:</p>
-											<p class="info-box-subtitle">Avion_contato@airline.com</p>
+											<p class="info-box-subtitle">contato@avian.com</p>
 										</div>
 									</div>
 								</li>
@@ -127,52 +129,59 @@
 						<span class="search-close">&times;</span>
 					</div>
 				</div>
-
+				
 			</nav>
 			
 		</header>
-       <section>
-        <div class="container3">
-                <h1>Cadastro de Clientes</h1>
+	   
+		<div id="banner-area" class="banner-area" style="background-image:url(images/serv.jpg)">
+            <div class="banner-text">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xs-12">
+                        <div class="banner-heading">
+                           <h1 class="banner-title" >Alterar passagem</h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+		
+		<section>
+        <div id = "secap" class="container3">
+                <h1>Altere sua passagem</h1>
         
 
            <div class="container2"> 
-	     <form name="cadastro_cliente" method="post" action="..\controller\controller.php">
-                <label for="nomec">Nome:</label>
-                <input name="nome" id="nomec" required="required" type="text" placeholder="Digite seu nome completo"  maxlength="60"/>
+	     <form action="/action_page.php" name="alterar_ps" method="POST" action="url para script aqui">
             
-                <label for="datanasc">Data de Nascimento:</label>
-                <input name="data" id="datanasc" required="required" type="date" placeholder="Digite sua data de Nascimento" />
-             
-                <label for="email">E-mail:</label>
-                <input name="email" id="email" required="required" type="email" placeholder="Digite o seu e-Mail" size="30"/>
-         
-                <label for="telefone">Telefone:</label>
-				<input name="telefone" id="telefone" required="required" type="tel" placeholder="Ex: 12 12345-6789"  size="30"/>
+                <label for="alt_classe">Alterar Classe:</label>
+                <select id="alt_classe">
+                    <option value="eco">Econômica</option>
+                    <option value="pri">Primeira classe</option>
+                  </select><br>
 
-				<label for="cpf">CPF:</label>
-				<input name="cpf" id="cpf" required="required" type="text" placeholder="Digite seu cpf.." size="11"/>
-				
-				<label for="psw1">Senha:</label>
-				<input name="psw1" id="psw1" required="required" type="password" placeholder="Digite sua senha.." size="30"/>
-				
-				<label for="psw2">Repita a senha:</label>
-				<input name="psw2" id="psw2" required="required" type="password" placeholder="Digite sua senha novamente.." size="30"/>
-				
-				<input type="hidden" name="acao" value="cadastrar" id="acao">
-           
-                <input type="submit" type="button" class="button" value="Cadastrar"/>
-                <input type="submit" type="button" class="button" value="Login"/>
+				  <label id = "obs-alt"for="obs-alt">*Ao alterar a classe podera ser cobrado a diferença</label><BR><br>
 
-					</form>
-    } 
+					<script>
+						function alertAlteracao() {
+						  alert("A passagem foi alterada!");
+						}
+						</script>                  
+
+                
+                <input id="btn_alterarP" type="submit" type="button" class="button" value="Alterar" onclick="alertAlteracao()"/>
+                
+
+
+
+                    </form>
             </div>
-		</div>
-		
-	</section>
+        </div>
 
-
-		<footer id="footer" class="footer bg-overlay">
+    </section>
+        <footer id="footer" class="footer bg-overlay">
             <div class="footer-main">
                   <div class="container">
                         <div class="row">
@@ -193,7 +202,7 @@
                               <div class="col-md-4 col-sm-12 footer-widget">
                                     <h3 class="widget-title">Horario de atendimento</h3>
                                     <div class="horario-funcionamento">
-                                          Nos trabalhamos todos os dias. Em caso de duvidas entre em contato conosco nos horarios:
+                                          Nos trabalhamos todos os dias. Em caso de duvidas entre em contato conosco nos horrarios:
                                           <br><br> Segunda - Sexta: <span class="text-right">07:00 - 20:00 </span>
                                           <br> Sabados: <span class="text-right">09:00 - 17:00</span>
                                           <br> Domingos: <span class="text-right">10:00 - 15:00</span>
